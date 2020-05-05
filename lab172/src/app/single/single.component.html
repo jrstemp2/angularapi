@@ -1,10 +1,5 @@
-
-<div>
-    Title: 
-    <p>{{myPost.title}}</p>
-    <br/>
-    Image: 
-    <br />
-    Link:
-</div>
-
+{{myPost.data.title}}
+<br />
+<img src="{{myPost.data.thumbnail}}" />
+<br />
+<a href="https://www.reddit.com{{myPost.data.permalink}}">Go To Page</a>

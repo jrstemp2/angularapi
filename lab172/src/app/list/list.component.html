@@ -1,7 +1,11 @@
 
 
-<h1>The List Will Go Here</h1>
+<h1>The List Will Go Here Next</h1>
 
 
-<div *ngFor="let p of posts">{{p.data}}</div>
+<div *ngIf="posts" class="list">
+    <div *ngFor="let p of posts.data.children" class="section">
+        <app-single [myPost]="p"></app-single>        
+    </div>
+</div>
 

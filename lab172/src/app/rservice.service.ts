@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Posts, Data1, Children, SinglePost} from './interfaces/redpost';
+import { Posts, SinglePost} from './interfaces/redpost';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +10,13 @@ import { Posts, Data1, Children, SinglePost} from './interfaces/redpost';
 
 export class RService {
 
-  apiUrl = 'https://www.reddit.com/r/aww/.json';
+  apiUrl = 'https://www.reddit.com';
 
   constructor(private http:HttpClient) { }
 
 
   getRPost(){
-    return this.http.get<Posts>(this.apiUrl);
+    return this.http.get<Posts>(`${this.apiUrl}/r/aww/.json`);
   }
 
 
